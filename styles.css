@@ -1,0 +1,305 @@
+
+/* ======= ======= general ======= ======= */
+html, body {
+    height: 100%;
+}
+body {
+    font-family: "Ariel", sans-serif;
+}
+/*font-family: 'Rock Salt', cursive;*/
+
+/*p {
+    margin: 10px 20px;
+    font-size: 1em;
+}*/
+/* ======= header ======= */
+
+#container {
+    height: 80px;
+    background-color: white;
+    border: 0;
+}
+
+/* ======= center ======= */
+#page-wrap {
+    width: 100%;
+    height: 100%;
+    min-width: 300px;
+    margin: 5 auto;
+}
+
+/* ======= clear floats ======= */
+.clearfix:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+/*  ======= ======= sections ======= ======= */
+.section {
+    margin: 0;
+    border: 2px solid #495247;
+/*}
+#header, #sidebar, #main, #footer {
+    box-sizing: border-box;
+}*/
+
+#myname {
+  font-family: 'Rock Salt', cursive;
+  font-size: 30px;
+  color: white;
+  margin: 20px 20px 20px 20px;
+}
+
+#header, #footer {
+    height: 10%;
+    background-color: #white;
+}
+#sidebar, #main {
+    float: left;
+}
+#sidebar {
+    min-width: 160px;
+    width: 20%;
+    height: 80%;
+    margin: 0;
+    background-color: #thistle;
+}
+#main {
+    width: 80%;
+    height: 40%;
+    margin: 0;
+    background-color: #white;
+}
+#cell-box {
+    float: left;
+    width: 80%;
+    height: 40%;
+}
+#footer {
+    clear: both;
+}
+
+/* Large desktop */
+@media all and (min-width: 1200px) { ... }
+
+/* Medium devices (laptops/desktops, 980px to 1199px) */
+@media all and (min-width: 980px) and (max-width: 1199px) { ... }
+
+/* tablet (portrait) to tablet (landscape) and desktop */
+@media all and (min-width: 768px) and (max-width: 979px) { ... }
+
+/* phone (landscape) to tablet (portrait) */
+@media all and (min-width: 480px) and (max-width: 767px) { ... }
+
+/* phone (portrait) to phone (landscape) */
+@media all and (min-width: 320px) and (max-width: 479px) { ... }
+
+/* phone (portrait) */
+@media all and (max-width: 319px) { ... }
+
+generalized breakpoints
+@media (min-width: 768px) { ... }  	// mobile
+@media (min-width: 992px) { ... }  	// tablet
+@media (min-width: 1200px) { ... }	// laptop
+
+
+/*  ======= ======= content cells ======= ======= */
+.cell {
+    float: left;
+    height: 100%;
+    width: 33.33%;
+    background-color: #white;
+    border: 2px solid #495247;
+    box-sizing: border-box;
+}
+.photo-box {
+    width: 100%;
+    height: 80%;
+    margin-top: 34px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*#photo-left, #photo-mid, #photo-right {
+    box-sizing: border-box;
+}
+#photo-left {
+    background-image: url("../images/AlleyCat.jpg");
+}
+#photo-mid {
+    background-image: url("../images/AfterUs.jpg");
+}
+#photo-right {
+    background-image: url("../images/ChapterHouse_beers.jpg");
+}*/
+
+/*  ======= ======= responsive  ======= ======= */
+
+/* ======= large desktop ======= */
+@media all and (min-width: 1200px) {
+    body {
+        background-color: white;
+    }
+}
+
+/* ======= desktop ======= */
+@media all and (min-width: 980px) and (max-width: 1199px) {
+    body {
+        background-color: #96858f;
+    }
+    #sidebar, #main {
+        float: left;
+    }
+    #sidebar {
+        min-width: 160px;
+        width: 20%;
+        height: 80%;
+        margin: 0;
+        background-color: #813772;
+    }
+    #main {
+        width: 80%;
+        height: 40%;
+        margin: 0;
+        background-color: #96858f;
+    }
+    #cell-box {
+        float: left;
+        width: 80%;
+        height: 40%;
+    }
+    .photo-box {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+/* ======= portrait tablet to landscape and desktop ======= */
+@media all and (min-width: 768px) and (max-width: 979px) {
+    body {
+        background-color: #6d7993;
+    }
+    #sidebar, #main {
+        float: left;
+        display: inline-block;
+        width: 50%;
+        height: 220px;
+    }
+    #sidebar {
+        background-color: #88d317;
+    }
+    #cell-box {
+        clear: both;
+        width: 100%;
+        height: 40%;
+    }
+    .photo-box {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+/* ======= portrait tablet to landscape and desktop ======= */
+@media all and (min-width: 468px) and (max-width: 767px) {
+    body {
+        background-color: #9099a2;
+    }
+    #sidebar, #main {
+        display: inline-block;
+        width: 50%;
+        height: 220px;
+    }
+    #sidebar {
+        background-color: #thistle;
+    }
+    #cell-box {
+        clear: both;
+        width: 100%;
+    }
+    .cell {
+        width: 100%;
+    }
+    .photo-box {
+        width: 90%;
+        margin: 0 auto;
+    }
+    #cell-left, #cell-mid {
+        float: left;
+        display: inline-block;
+        width: 50%;
+    }
+    #cell-right {
+        clear: both;
+        display: block;
+        width: 100%;
+    }
+}
+
+/* ======= landscape phone to portrait tablet ======= */
+@media all and (min-width: 320px) and (max-width: 467px) {
+    body {
+        background-color: #white;
+    }
+    #header, #footer {
+        height: 60px;
+    }
+    #sidebar, #main {
+        clear: both;
+        display: block;
+        height: 100%;
+        width: 40%;
+    }
+    #sidebar {
+        background-color: #purple;
+    }
+    #cell-box {
+        clear: both;
+        width: 100%;
+    }
+    .cell {
+        width: 100%;
+    }
+    .photo-box {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+/* ======= landscape phone ======= */
+@media all and (max-width: 319px) {
+    body {
+        background-color: thistle ;
+        min-width: 300px;
+    }
+    #header, #footer {
+        height: 60px;
+        background-color: white
+    }
+    #sidebar, #main {
+        display: block;
+        height: 160px;
+        width: 100%;
+    }
+    #sidebar {
+        background-color: #thistle;
+    }
+    #cell-box {
+        clear: both;
+        width: 100%;
+    }
+    #cell-left, #cell-mid, #cell-right {
+        clear: both;
+        display: block;
+        width: 100%;
+        height: 160px;
+    }
+    .photo-box {
+        width: 140px;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
+/*  ======= ======= ARCHIVE  ======= ======= */
+/*  ======= ======= ARCHIVE  ======= ======= */
+/*  ======= ======= ARCHIVE  ======= ======= */
